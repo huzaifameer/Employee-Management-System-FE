@@ -3,13 +3,14 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { NavBarComponent } from "../../common/nav-bar/nav-bar.component";
 
 @Component({
-  selector: 'app-manage-emp',
-  standalone: true,
-  imports: [FormsModule, HttpClientModule, CommonModule],
-  templateUrl: './manage-emp.component.html',
-  styleUrl: './manage-emp.component.css',
+    selector: 'app-manage-emp',
+    standalone: true,
+    templateUrl: './manage-emp.component.html',
+    styleUrl: './manage-emp.component.css',
+    imports: [FormsModule, HttpClientModule, CommonModule, NavBarComponent]
 })
 export class ManageEmpComponent {
   public employeeObj = {
