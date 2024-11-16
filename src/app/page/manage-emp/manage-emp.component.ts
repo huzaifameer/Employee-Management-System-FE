@@ -17,7 +17,7 @@ export class ManageEmpComponent {
     firstName: '',
     lastName: '',
     email: '',
-    departmentId: '',
+    deptId: '',
     roleId: '',
   };
 
@@ -25,7 +25,7 @@ export class ManageEmpComponent {
 
   addEmployee() {
     this.http
-      .post('http://localhost:8080/emp-controller/add-employee', this.employeeObj)
+      .post('http://localhost:8080/employee/add-employee', this.employeeObj)
       .subscribe(
         (data) => {
           Swal.fire({

@@ -19,7 +19,7 @@ export class ViewAllEmployeeComponent {
   }
   loadEmployeeTable() {
     this.http
-      .get('http://localhost:8080/emp-controller/get-all')
+      .get('http://localhost:8080/employee/get-all')
       .subscribe((res) => {
         console.log(res);
         this.empList = res;
@@ -47,7 +47,7 @@ export class ViewAllEmployeeComponent {
         if (result.isConfirmed) {
           this.http
             .delete(
-              `http://localhost:8080/emp-controller/delete-emp/${employee.id}`,
+              `http://localhost:8080/employee/${employee.id}`,
               { responseType: 'text' }
             )
             .subscribe((res) => {
